@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Reuseable Styles */
+.container {
+  max-width: 120rem;
+  margin: 2rem auto;
+  padding: 2.4rem;
+}
+
+.grid {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid--2--cols {
+  grid-template-columns: 50fr 45fr;
+  gap: 2rem;
+}
+
+.grid--3--cols {
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 0.5rem;
+}
+
+/* preview section */
+.section-preview {
+  background-color: #090b1a;
+}
+
+.preview {
+  max-width: 100rem;
+  background-color: #1b1938;
+  margin: 9.6rem auto;
+  border-radius: 9px;
+}
+
+.preview-textbox {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 4.8rem 4.8rem;
+}
+
+.heading-primary,
+.preview-detail {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.heading-primary {
+  font-size: 2.8rem;
+}
+
+.preview-detail {
+  font-size: 2.4rem;
+}
+
+.highlight {
+  color: #aa5cdb;
+}
+
+.preview-text,
+.preview-tag {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+.preview-text {
+  color: #ffffffbf;
+}
+
+.preview-tag {
+  color: #ffffff99;
+  text-transform: uppercase;
+}
+
+.preview-tags {
+  padding-top: 3.2rem;
+  list-style: none;
+  text-align: left;
+}
+
+.preview-imgbox {
+  background-image: linear-gradient(
+      to left,
+      rgba(170, 92, 219, 0.6),
+      rgba(170, 92, 219, 0.6)
+    ),
+    url("images/image-header-desktop.jpg");
+  width: 100%;
+  height: 100%;
+  border-radius: 0 9px 9px 0;
+}
+
+.preview-img {
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.4;
+}
+
+/* Media queries */
+@media (max-width: 900px) {
+  .preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 32.7rem;
+  }
+
+  .preview-imgbox {
+    grid-row: 1/2;
+
+    height: 25rem;
+    width: 32.7rem;
+
+    background-image: linear-gradient(
+        to left,
+        rgba(170, 92, 219, 0.6),
+        rgba(170, 92, 219, 0.6)
+      ),
+      url("images/image-header-mobile.jpg");
+    background-size: cover;
+
+    border-radius: 9px 9px 0 0;
+  }
+
+  .preview-textbox {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .heading-primary {
+    font-size: 2.4rem;
+  }
+
+  .preview-tags {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.2rem;
+  }
+
+  .tag-1 {
+    grid-row: 2/3;
+    padding-bottom: 0.8rem;
+  }
+
+  .tag-2 {
+    grid-row: 4/5;
+    padding-bottom: 0.8rem;
+  }
+}
